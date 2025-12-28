@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS-数据类型</title>
 </head>
+
 <body>
-  
+
+
+  <!-- JS数据类型 -->
+  <!-- 分为：基本数据类型，引用数据类型 -->
+  <!-- 基本数据类型：Number, Boolean, String, Null, Undefined -->
+  <!-- Number类型：表示数字，包括整数和浮点数 -->
+  <!-- Boolean类型：表示布尔值，true或false -->
+  <!-- String类型：表示字符串，一般使用单引号 -->
+  <!-- Null类型：表示空值 -->
+  <!-- Undefined类型：表示未定义的值 -->
+
+  <!-- typeof 运算符，用于获取变量的数据类型 -->
 
   <script>
     //1. 数据类型
     // alert(typeof 10); //number
     // alert(typeof 1.5); //number
-    
+
     // alert(typeof true); //boolean
     // alert(typeof false); //boolean
 
@@ -20,7 +33,8 @@
     // alert(typeof 'JS'); //string
     // alert(typeof `JavaScript`); //string
 
-    // alert(typeof null); //null ? -> object
+    // alert(typeof null); //null ? -> object 
+    // (JS中的一个历史遗留问题，null被认为是一个对象类型)
 
     // let a ;
     // alert(typeof a); //undefined
@@ -29,10 +43,11 @@
     let name = 'Tom';
     let age = 18;
 
-    console.log('我是'+name+', 我今年'+age+'岁');
+    console.log('我是' + name + ', 我今年' + age + '岁');
+    // 使用``反引号(波浪号那个键)包裹字符串,
+    // 在需要嵌入变量或表达式的地方使用${}包裹
     console.log(`我是${name}, 我今年${age}岁`);
-    
-    
   </script>
 </body>
+
 </html>

@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS-函数</title>
 </head>
+
 <body>
-  
+
 
   <script>
+
+    // 自定义对象定义格式
+    // let 对象名 = {
+    //   属性名1: 属性值1,  
+    //   属性名2: 属性值2,
+    //   ...
+    //   方法名1: function(){
+    //     // 方法体  
+    //   }
+    // }
+
     //1. 自定义对象
     // let user = {
     //   name: 'Tom',
     //   age: 18,
     //   gender: '男',
-    //   sing: function(){
+
+    //   sing: function(){      
     //     alert(this.name + '悠悠的唱着最炫的民族风~')
     //   }
     // }
 
+
+    // 方法可简化为如下格式
     //let user = {
     //  name: 'Tom',
     //  age: 18,
@@ -32,7 +48,8 @@
     //   name: 'Tom',
     //   age: 18,
     //   gender: '男',
-    //   sing: () => { //注意: 在箭头函数中, this并不指向当前对象 - 指向的是当前对象的父级 【不推荐】
+    //   注意: 在箭头函数中, this并不指向当前对象 - 指向的是当前对象的父级 【不推荐】
+    //   sing: () => { 
     //     alert(this + ':悠悠的唱着最炫的民族风~')
     //   }
     // }
@@ -43,6 +60,10 @@
 
 
     //3. JSON - JS对象标记法
+    // JSON是一种轻量级的数据交换格式
+    // JS对象和JSON格式的区别:  
+    // JS对象的属性名可以不加引号, JSON格式的属性名必须加双引号
+
     let person = {
       name: 'itcast',
       age: 18,
@@ -51,8 +72,9 @@
     alert(JSON.stringify(person)); //js对象 --> json字符串
 
     let personJson = '{"name": "heima", "age": 18}';
-    alert(JSON.parse(personJson).name);
+    alert(JSON.parse(personJson).name); //json字符串 --> js对象
 
   </script>
 </body>
+
 </html>

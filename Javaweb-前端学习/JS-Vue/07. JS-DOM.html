@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS-DOM</title>
 </head>
+
 <body>
 
   <h1 id="title1">11111</h1>
@@ -12,15 +14,33 @@
   <h1>33333</h1>
 
   <script>
+    // DOM: 文档对象模型
+    // DOM是HTML和XML文档的编程接口
+    // 通过DOM，程序可以动态访问和更新文档的内容、结构和样式
+
+    // 将HTML文档中的每个标签、属性和文本内容都表示为一个对象，
+    // 这些对象构成了一个树形结构，称为DOM树
+
+
     //1. 修改第一个h1标签中的文本内容
     //1.1 获取DOM对象
+
+    // document.querySelector('选择器'); // 获取匹配选择器的第一个元素节点
+
     // let h1 = document.querySelector('#title1');
-    //let h1 = document.querySelector('h1'); // 获取第一个h1标签
+
+    // doucument.querySelectorAll('选择器'); // 获取匹配选择器的所有元素节点，
+    // 返回一个节点列表(NodeList)
+
+    // let h1 = document.querySelector('h1'); // 获取第一个h1标签
 
     let hs = document.querySelectorAll('h1');
 
     //1.2 调用DOM对象中属性或方法
-    hs[0].innerHTML = '修改后的文本内容';
+    hs[0].innerHTML = '修改后的文本内容1';
+    hs[1].innerHTML = '修改后的文本内容2';
+    hs[2].innerHTML = '修改后的文本内容3';
   </script>
 </body>
+
 </html>

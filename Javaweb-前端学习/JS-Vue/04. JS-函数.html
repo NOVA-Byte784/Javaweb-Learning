@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS-函数</title>
 </head>
+
 <body>
-  
+
 
   <script>
+    // 函数的定义语法
+    // function 函数名(形参1, 形参2, ...){
+    //   // 函数体
+    //   return 返回值;
+    // }
+
+    // 实参个数可以和形参个数不一致
+
     //1. 函数定义及调用 - 具名函数
-    // function add(a,b){
+    // function add(a, b) {
     //   return a + b;
     // }
 
-    // let result = add(10,20);
+    // let result = add(10, 20);
     // console.log(result);
-    
+
+    // 如果实参个数多于形参个数，多余的实参会被忽略
+    // function sum(a, b) {
+    //   return a + b;
+    // }
+
+    // let res = sum(20, 30, 40, 50); // 多余的实参40,50会被忽略
+    // console.log(res);
+
+    // 如果实参个数少于形参个数，缺少的形参会被赋值为undefined
 
     //2. 函数定义及调用 - 匿名函数
     //2.1 函数表达式
-    // let add = function(a,b){
+    // let add = function (a, b) {
     //   return a + b;
     // }
 
-    // let result = add(100,200);
+    // let result = add(100, 200);
     // console.log(result);
 
-    //2.2 箭头函数
-    let add = (a,b) => {
+    //2.2 箭头函数(将function简化,但要加上=>)
+    let add = (a, b) => {
       return a + b;
     }
 
-    let result = add(1000,2000);
+    let result = add(1000, 2000);
     console.log(result);
-
 
   </script>
 </body>
+
 </html>
