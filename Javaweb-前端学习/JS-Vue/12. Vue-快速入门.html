@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vue-快速入门</title>
 </head>
+
 <body>
-  
+
   <div id="app">
     <h1>{{message}}</h1>
     <h1>{{count}}</h1>
+    <!-- 插值表达式，它的作用是将 JavaScript 中的数据动态渲染到 HTML 中 -->
   </div>
-  
+
 
   <script type="module">
     import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
+    // 'https://unpkg.com/vue@3/dist/vue.esm-browser.js' 是 Vue 3 的浏览器版本的 ES 模块
+    // ES模块是一种 JavaScript 模块化的标准
 
+    // createApp() 方法用于创建一个 Vue 应用实例，是 Vue 3 的唯一入口
     createApp({
       data() {
         return {
@@ -23,7 +29,11 @@
           count: 100
         }
       }
+
+      // data() 方法用于定义组件的响应式数据，必须返回一个对象
     }).mount('#app');
+    // mount() 方法用于将 Vue 应用挂载到指定的 DOM 元素上
   </script>
 </body>
+
 </html>
