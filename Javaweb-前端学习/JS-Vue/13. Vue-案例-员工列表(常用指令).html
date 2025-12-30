@@ -117,6 +117,9 @@
             <a href="#">退出登录</a>
         </div>
 
+
+        {{searchForm}} <!-- 调试用，显示searchForm对象内容 -->
+
         <!-- 搜索表单区域 -->
         <form class="search-form">
             <label for="name">姓名：</label>
@@ -139,7 +142,11 @@
                 <option value="5">咨询师</option>
             </select>
 
+
+            <!-- v-on：为元素绑定事件监听器 -->
             <button type="button" v-on:click="search">查询</button>
+
+            <!-- v-on的简写：可以直接使用@ -->
             <button type="button" @click="clear">清空</button>
         </form>
 
@@ -213,6 +220,8 @@
         import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 
         createApp({
+
+            // 使用data()函数，返回数据对象
             data() {
                 return {
                     searchForm: { //封装用户输入的查询条件
@@ -253,7 +262,8 @@
                     ]
                 }
             },
-            //方法
+
+            //使用methods，定义方法
             methods: {
                 search() {
                     //将搜索条件, 输出到控制台
