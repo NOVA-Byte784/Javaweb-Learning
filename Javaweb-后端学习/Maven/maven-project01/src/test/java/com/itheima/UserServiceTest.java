@@ -69,9 +69,10 @@ public class UserServiceTest {
     /**
      * 参数化测试
      */
-    @DisplayName("测试用户性别")
-    @ParameterizedTest
+    @DisplayName("测试用户性别")  // @DisplayName 用于为测试类或测试方法提供自定义名称
+    @ParameterizedTest  // @ParameterizedTest 用于表示这是一个参数化测试方法
     @ValueSource(strings = {"100000200010011011","100000200010011031","100000200010011051"})
+    // @ValueSource 用于为参数化测试提供一组测试参数
     public void testGetGender2(String idCard){
         UserService userService = new UserService();
         String gender = userService.getGender(idCard);
@@ -79,3 +80,6 @@ public class UserServiceTest {
         Assertions.assertEquals("男", gender);
     }
 }
+
+
+
