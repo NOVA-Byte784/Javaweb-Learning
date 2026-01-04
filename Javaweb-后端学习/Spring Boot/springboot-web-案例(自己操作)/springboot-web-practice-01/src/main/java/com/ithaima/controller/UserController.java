@@ -28,7 +28,7 @@ public class UserController {
         // InputStream in = new FileInputStream(new File("D:\\idea_workspace\\springboot-web-practice-01\\src\\main\\resources\\users.txt"));
 
         // 推荐使用类加载器读取资源文件，路径相对于resources目录
-        InputStream in = this.getClass().getClassLoader().getResourceAsStream("users.txt");
+        InputStream in = this.getClass().getClassLoader().getResourceAsStream("user.txt");
 
         ArrayList<String> lines = IoUtil.readLines(in, StandardCharsets.UTF_8,new ArrayList<>());
 
