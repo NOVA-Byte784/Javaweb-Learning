@@ -1,0 +1,29 @@
+## 定义对象 /Map集合
+#
+#user:
+#  name: Tom
+#  age: 18
+#  gender: male
+#
+#hobby:
+#  - reading
+#  - swimming
+#  - coding
+
+# 配置Spring Boot应用程序的基本信息和数据源
+spring:
+  application:
+    name: springboot-mybatis-quickstart-practice
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/web01
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456#
+
+# 配置MyBatis的日志实现类，使用标准输出日志
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*.xml
